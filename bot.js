@@ -1,11 +1,10 @@
-const Main = require('./src/main/main.js')
+const Discord = require('discord.js');
+exports.client = new Discord.Client({autoReconnect: true});
 
-Main.inicializar();
+const main = require('./src/main/main.js')
+const message = require('./src/client/message.js');
 
-client.on('message', message => {
-  if (message.content === '!kappa') {
-    message.reply('Katreque é o Kappa!');
-  }
-});
-
-client.login(auth.token);
+main.inicializarServer();
+main.inicializarBot();
+message.messageManager();
+main.finalizarBot();
