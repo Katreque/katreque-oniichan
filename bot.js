@@ -11,8 +11,9 @@ app.listen(port, () => {
 })
 
 setInterval(function(){
+  console.log('Ping no Heroku');
   app.get('https://katreque-oniichan.herokuapp.com/');
-}, 4000000)
+}, 1000*60*15);
 
 client.on('ready', () => {
   console.log("Estou pronto Capitão!");
