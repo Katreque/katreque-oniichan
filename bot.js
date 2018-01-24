@@ -10,6 +10,10 @@ app.listen(port, () => {
     console.log('Porta:', port);
 })
 
+setInterval(function(){
+  app.get('https://katreque-oniichan.herokuapp.com/');
+}, 4000000)
+
 client.on('ready', () => {
   console.log("Estou pronto Capitão!");
 });
