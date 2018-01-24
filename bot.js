@@ -1,23 +1,6 @@
-const express = require('express');
-const Discord = require('discord.js');
-const client = new Discord.Client({autoReconnect: true});
+const Main = require('./src/main/main.js')
 
-const auth = require('./auth.json');
-const app = express();
-const port = process.env.PORT || 7770;
-
-app.listen(port, () => {
-    console.log('Porta:', port);
-})
-
-setInterval(function(){
-  console.log('Ping no Heroku');
-  app.get('https://katreque-oniichan.herokuapp.com/');
-}, 1000*60*15);
-
-client.on('ready', () => {
-  console.log("Estou pronto Capitão!");
-});
+Main.inicializar();
 
 client.on('message', message => {
   if (message.content === '!kappa') {
