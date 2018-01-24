@@ -11,7 +11,7 @@ app.listen(port, () => {
 })
 
 client.on('ready', () => {
-  console.log(process.env.PORT);
+  console.log("Estou pronto Capitão!");
 });
 
 client.on('message', message => {
