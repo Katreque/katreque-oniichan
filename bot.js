@@ -1,9 +1,9 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const client = new Discord.Client({autoReconnect: true});
 var auth = require('./auth.json');
 
 client.on('ready', () => {
-  client.user.setActivity('https://git.io/vNrBp', {type: 'WATCHING'});
+  console.log(process.env.PORT);
 });
 
 client.on('message', message => {
