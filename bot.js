@@ -1,6 +1,14 @@
+const express = require('express');
 const Discord = require('discord.js');
 const client = new Discord.Client({autoReconnect: true});
-var auth = require('./auth.json');
+
+const auth = require('./auth.json');
+const app = express();
+const port = process.env.PORT || 7770;
+
+app.listen(port, () => {
+    console.log('Porta:', port);
+})
 
 client.on('ready', () => {
   console.log(process.env.PORT);

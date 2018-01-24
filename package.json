@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/Katreque/katreque-oniichan#readme",
   "dependencies": {
-    "discord.js": "^11.3.0"
+    "discord.js": "^11.3.0",
+    "express": "^4.16.2"
   }
 }
