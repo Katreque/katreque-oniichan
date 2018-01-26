@@ -6,5 +6,5 @@ const message = require('./src/client/message.js');
 
 main.inicializarServer();
 main.inicializarBot();
-message.messageManager();
-main.finalizarBot();
+message.messageEvents();
+main.autenticarBot();
