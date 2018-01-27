@@ -49,7 +49,7 @@ var channelEvents = function() {
         .catch((err) =>{
           console.log(err)
         })
-    }, 1000*60*120)
+    }, 1000*60*360)
 }
 
 module.exports = {
