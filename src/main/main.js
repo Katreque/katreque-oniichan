@@ -25,7 +25,8 @@ var inicializarBot = function(){
   });
 }
 
-var finalizarBot = function(){
+//Conecta o bot com o Discord.
+var autenticarBot = function(){
   var auth = require('../auth/auth.js');
   client.login(auth.token);
 }
@@ -33,5 +34,5 @@ var finalizarBot = function(){
 module.exports = {
   inicializarServer: inicializarServer,
   inicializarBot: inicializarBot,
-  finalizarBot: finalizarBot
+  autenticarBot: autenticarBot
 }

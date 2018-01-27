@@ -3,8 +3,10 @@ exports.client = new Discord.Client({autoReconnect: true});
 
 const main = require('./src/main/main.js')
 const message = require('./src/client/message.js');
+const channel = require('./src/client/channel.js');
 
 main.inicializarServer();
 main.inicializarBot();
-message.messageManager();
-main.finalizarBot();
+message.messageEvents();
+channel.channelEvents();
+main.autenticarBot();
