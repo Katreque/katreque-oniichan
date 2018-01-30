@@ -36,20 +36,17 @@ const amefuriBio = {
 }
 
 var channelEvents = function() {
-    //Mensagem de boas vindas enviadas a cada hora no Lobby!
-    setInterval(() => {
-      var chEvent = client.channels.find('name', 'lobby');
+  var chEvent = client.channels.find('name', 'lobby');
 
-      //Caso não encontre o canal na pesquisa acima.
-      if (!chEvent) {
-        return;
-      }
+  //Caso não encontre o canal na pesquisa acima.
+  if (!chEvent) {
+    return;
+  }
 
-      chEvent.send(amefuriBio)
-        .catch((err) =>{
-          console.log(err)
-        })
-    }, 1000*60*120)
+  chEvent.send(amefuriBio)
+  .catch((err) =>{
+    console.log(err)
+  })
 }
 
 module.exports = {
