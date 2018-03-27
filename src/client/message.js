@@ -19,7 +19,7 @@ var messageEvents = function() {
     }
 
     // Verifica se já tiveram mensagens suficientes no canal para poder reenviar a mensagem de boas vindas.
-    if (LobbyConsts.numeroMensagensLobby >= 30) {
+    if (LobbyConsts.numeroMensagensLobby >= 200) {
       Channel.channelEvents();
       LobbyConsts.numeroMensagensLobby = 0;
     }
